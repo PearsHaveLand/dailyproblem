@@ -10,3 +10,6 @@ I wouldn't bank on it.
 
 ## Is it good practice?
 You betcha!
+
+## Why are you posting this online?
+Why does anything post anything online? Brain chemicals, that's why.
