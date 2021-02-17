@@ -19,6 +19,8 @@ def find_sums(k, num_list):
 
     # Iterating by indices for proper list slicing
     for i in range(len(num_list)):
+
+        # Get all items after i in the list
         remainder_list = num_list[i::]
 
         # Check the sum of num_list[i] with all of the remaining elements
