@@ -13,26 +13,33 @@ input_list = [1, 2, 3, 4, 5]
 def products(num_list):
 
     product_list = []
-    length = len(num_list)
+    
+    # Handle type errors
+    if type(num_list) is list:
 
-    for i in range(length):
-        
-        # Unintuitively, lists in Python are passed by reference, which
-        # necessitates the .copy() function
-        multiplicand_list = num_list.copy()
+        length = len(num_list)
 
-        # Remove the i'th index from the list to follow the problem instructions
-        multiplicand_list.pop(i)
+        # Handle case involving lists that are too short to process
+        if length > 1:
 
-        # Initialize product to be first number in the list
-        product = multiplicand_list[0]
+            for i in range(length):
+                
+                # Unintuitively, lists in Python are passed by reference, which
+                # necessitates the .copy() function
+                multiplicand_list = num_list.copy()
 
-        # Iterate through the list of multiplicands, not including current
-        # product
-        for j in range(1, len(multiplicand_list)):
-            product = product * multiplicand_list[j]
-        
-        product_list.append(product)
+                # Remove the i'th index from the list to follow the problem instructions
+                multiplicand_list.pop(i)
+
+                # Initialize product to be first number in the list
+                product = multiplicand_list[0]
+
+                # Iterate through the list of multiplicands, not including current
+                # product
+                for j in range(1, len(multiplicand_list)):
+                    product = product * multiplicand_list[j]
+                
+                product_list.append(product)
 
     return product_list
 
