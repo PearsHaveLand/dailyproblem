@@ -1,4 +1,5 @@
-# Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+# Given a list of numbers and a number k, return whether any two numbers from
+# the list add up to k.
 
 # For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
@@ -7,8 +8,8 @@
 my_k = 17
 my_num_list = [10, 15, 3, 7]
 
-# For each item in the list, adds it to each of the _next_ items
-# on the list, checking if that sum is k
+# For each item in the list, adds it to each of the _next_ items on the list,
+# checking if that sum is k
 #
 # Note: only attempts two-number summations 
 #
