@@ -93,7 +93,7 @@ def deserialize_list(tree_list):
 
         tree.left, tree_list = deserialize_list(tree_list)
         curr_node = tree_list[0]
-        print(curr_node)    
+        # print(curr_node)    
 
     # When opening to a new node, remove node delimiter and deserialize the rest of the list
     if curr_node == OPEN_RIGHT:
@@ -108,7 +108,6 @@ def deserialize_list(tree_list):
     # When opening to a new node, remove node delimiter and deserialize the rest of the list
     elif curr_node == OPEN_ROOT:
         tree_list = tree_list[1::]
-        # print("root found, list remainder:\n", tree_list)
         tree, tree_list = deserialize_list(tree_list)
 
     # When closing a node, do nothing else. Let function return
